@@ -662,10 +662,10 @@ if (Get-Command -Name "Get-Theme_Override" -ErrorAction SilentlyContinue) {
     Get-Theme_Override
 } else {
     # Oh My Posh initialization with local theme fallback and auto-download
-    $localThemePath = Join-Path (Get-ProfileDir) "cobalt2.omp.json"
+    $localThemePath = Join-Path (Get-ProfileDir) "emodipt-extend.omp.json"
     if (-not (Test-Path $localThemePath)) {
         # Try to download the theme file to the detected local path
-        $themeUrl = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/cobalt2.omp.json"
+        $themeUrl = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/emodipt-extend.omp.json"
         try {
             Invoke-RestMethod -Uri $themeUrl -OutFile $localThemePath
             Write-Host "Downloaded missing Oh My Posh theme to $localThemePath"
